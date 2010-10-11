@@ -1,0 +1,41 @@
+
+# This file is part of the dinSettingsPlugin package.
+# (c) DineCat, 2010 http://dinecat.com/
+#
+# For the full copyright and license information, please view the LICENSE file,
+# that was distributed with this package, or see http://www.dinecat.com/din/license.html
+
+# dinSettingsPlugin routing configuration
+#
+# @package     dinSettingsPlugin
+# @subpackage  config
+# @author      Nicolay N. Zyk <relo.san@gmail.com>
+
+din_settings_param_admin:
+    class:                      'sfDoctrineRouteCollection'
+    options:
+        model:                  'DinSettingsParam'
+        module:                 'dinSettingsParamAdmin'
+        prefix_path:            '/adm/settings/:set_id/tree/:tree_id/param'
+        column:                 'id'
+        with_wildcard_routes:   true
+
+din_settings_tree_admin:
+    class:                      'sfDoctrineRouteCollection'
+    options:
+        model:                  'DinSettingsTree'
+        module:                 'dinSettingsTreeAdmin'
+        prefix_path:            '/adm/settings/:set_id/tree'
+        column:                 'id'
+        with_wildcard_routes:   true
+
+din_settings_admin:
+    class:                      'sfDoctrineRouteCollection'
+    options:
+        model:                  'DinSettingsSet'
+        module:                 'dinSettingsAdmin'
+        prefix_path:            '/adm/settings'
+        column:                 'id'
+        with_wildcard_routes:   true
+
+#EOF

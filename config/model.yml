@@ -21,4 +21,7 @@ filters:
     DinSettingsTreeTranslation:
         disable:                true
 
+    DinSettingsTree:
+        disable:                true
+
 #EOF

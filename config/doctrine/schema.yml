@@ -20,10 +20,10 @@ DinSettingsSet:
 
     columns:
         id:                 { type: 'integer(4)', primary: true, autoincrement: true }
-        application:        { type: 'string(50)', fixed: true }
-        name:               { type: 'string(50)', fixed: true, notnull: true }
+        application:        { type: 'string(50)' }
+        name:               { type: 'string(50)', notnull: true }
         is_enabled:         { type: 'boolean', notnull: true, default: true }
-        title:              { type: 'string(150)', fixed: true }
+        title:              { type: 'string(150)' }
         description:        { type: 'clob(65532)' }
         sequence:           { type: 'integer(4)' }
 
@@ -43,9 +43,9 @@ DinSettingsTree:
         id:                 { type: 'integer(4)', primary: true, autoincrement: true }
         set_id:             { type: 'integer(4)', notnull: true }
         root_id:            { type: 'integer(4)' }
-        name:               { type: 'string(50)', fixed: true, notnull: true }
+        name:               { type: 'string(50)', notnull: true }
         is_enabled:         { type: 'boolean', notnull: true, default: true }
-        title:              { type: 'string(150)', fixed: true }
+        title:              { type: 'string(150)' }
         description:        { type: 'clob(65532)' }
 
     indexes:
@@ -72,10 +72,10 @@ DinSettingsParam:
     columns:
         id:                 { type: 'integer(4)', primary: true, autoincrement: true }
         tree_id:            { type: 'integer(4)', notnull: true }
-        name:               { type: 'string(50)', fixed: true, notnull: true }
-        type:               { type: 'integer(1)', fixed: true, notnull: '1' }
+        name:               { type: 'string(50)', notnull: true }
+        type:               { type: 'integer(1)', notnull: true, default: '1' }
         is_enabled:         { type: 'boolean', notnull: true, default: true }
-        title:              { type: 'string(150)', fixed: true }
+        title:              { type: 'string(150)' }
         description:        { type: 'clob(65532)' }
         value:              { type: 'clob' }
 
